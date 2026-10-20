@@ -1,0 +1,5 @@
+.DS_Store
+._*
+
+# Logo sources (the site uses processed copies in assets/)
+Logo/

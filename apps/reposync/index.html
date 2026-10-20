@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RepoSync: automatic git commits from the Mac menu bar — Quinde Studio</title>
+<meta name="description" content="RepoSync is a macOS menu bar app that commits and pushes your git repositories on a schedule, and asks first when a change is big or risky.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; manifest-src 'self'; media-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#1030ff">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-title" content="Quinde Studio">
+
+<link rel="canonical" href="https://quindestudio.com/apps/reposync/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/favicon-64.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Quinde Studio">
+<meta property="og:title" content="RepoSync: automatic git commits from the Mac menu bar — Quinde Studio">
+<meta property="og:description" content="RepoSync is a macOS menu bar app that commits and pushes your git repositories on a schedule, and asks first when a change is big or risky.">
+<meta property="og:url" content="https://quindestudio.com/apps/reposync/">
+<meta property="og:image" content="https://quindestudio.com/assets/og-reposync.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="RepoSync: Commits and pushes your repos from the menu bar, and asks first when a change is big or risky.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RepoSync: automatic git commits from the Mac menu bar — Quinde Studio">
+<meta name="twitter:description" content="RepoSync is a macOS menu bar app that commits and pushes your git repositories on a schedule, and asks first when a change is big or risky.">
+<meta name="twitter:image" content="https://quindestudio.com/assets/og-reposync.jpg">
+<link rel="stylesheet" href="/assets/site.css?v=36">
+<script src="/assets/project.js?v=36" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","name":"RepoSync","url":"https://quindestudio.com/apps/reposync/","description":"RepoSync is a macOS menu bar app that commits and pushes your git repositories on a schedule, and asks first when a change is big or risky.","image":"https://quindestudio.com/assets/og-reposync.jpg","author":{"@type":"Organization","name":"Quinde Studio","url":"https://quindestudio.com/"},"@type":"SoftwareApplication","applicationCategory":"DeveloperApplication","operatingSystem":"macOS 14+"}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header field-blue">
+<div class="wrap bar">
+<a class="brand" href="/" aria-label="Quinde Studio, home"><span class="mark" aria-hidden="true"></span><span>Quinde Studio</span></a>
+<nav class="nav" aria-label="Main">
+<ul>
+<li><a href="/#games">Games</a></li>
+<li><a href="/#apps" aria-current="page">Apps</a></li>
+<li><a href="/#studio">Studio</a></li>
+<li><a href="/press/">Press</a></li>
+<li><a href="/support/">Support</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="main">
+<section class="phero field-blue" aria-labelledby="top">
+<div class="wrap phero-grid">
+<div class="phero-text">
+<p class="crumb"><a href="/#apps">Apps</a></p>
+<h1 id="top">RepoSync</h1>
+<p class="lede">Commits and pushes your repos from the menu bar, and asks first when a change is big or risky.</p>
+<div class="btn-row"><a class="btn btn--solid" href="mailto:hello@quindestudio.com?subject=RepoSync">Get RepoSync news</a><a class="btn" href="#try" data-needs-js hidden>Try it</a></div>
+<p class="status-line">macOS 14 or later, Apple silicon</p>
+</div>
+<figure class="phero-media"><figure class="shot"><a class="zoom" href="/assets/img/reposync-1-menu-bar.webp" data-caption=""><img src="/assets/img/reposync-1-menu-bar.webp" srcset="/assets/img/reposync-1-menu-bar-800.webp 800w, /assets/img/reposync-1-menu-bar.webp 1600w" sizes="(max-width: 52rem) 100vw, 46rem" alt="RepoSync's menu bar panel showing two repos waiting for approval, repos open in terminals, Claude usage bars and recently pushed repos." width="1600" height="1000" fetchpriority="high"></a></figure></figure>
+</div>
+</section>
+<nav class="subnav field-blue" aria-label="On this page"><div class="wrap"><ul><li><a href="#about">About</a></li><li><a href="#try" data-needs-js hidden>Would RepoSync ask?</a></li><li><a href="#how2">How it works</a></li><li><a href="#features">Features</a></li><li><a href="#more">Details that matter</a></li><li><a href="#faq">Questions</a></li><li><a href="#contact">Contact</a></li></ul></div></nav>
+<section id="about" class="section field-white" aria-labelledby="about-h">
+<div class="wrap split">
+<div class="split-head">
+<h2 id="about-h">About</h2>
+
+</div>
+<div>
+<p>RepoSync lives in the menu bar and, every two hours by default, commits and pushes the git repositories in the folders you choose. Small change sets go out silently. Bigger or unusual ones wait for your approval.</p>
+<p>The same panel shows which repos are open in your terminals and, if you like, your Claude Code usage limits.</p><dl class="glance"><div><dt>2 h</dt><dd>default sync interval</dd></div><div><dt>10 files</dt><dd>more than this and it asks</dd></div><div><dt>300 lines</dt><dd>added or removed, then it asks</dd></div><div><dt>50 MB</dt><dd>largest file it pushes unasked</dd></div></dl>
+</div>
+</div>
+</section>
+<section id="try" class="section field-blue" aria-labelledby="try-h" hidden data-needs-js>
+<div class="wrap split">
+<div class="split-head">
+<h2 id="try-h">Would RepoSync ask?</h2>
+<p class="muted">Set up a change and see whether RepoSync would push it on its own or wait for you. These are the default limits. Every one can be changed in Settings.</p>
+</div>
+<div>
+<div class="w w-rs" data-widget="reposync">
+<div class="w-controls">
+<div class="w-field"><label for="rs-files">Files changed</label><output id="rs-files-out" for="rs-files">4</output></div>
+<input id="rs-files" type="range" min="0" max="30" value="4">
+<div class="w-field"><label for="rs-lines">Lines added or removed</label><output id="rs-lines-out" for="rs-lines">80</output></div>
+<input id="rs-lines" type="range" min="0" max="1000" step="10" value="80">
+<div class="w-field"><label for="rs-ahead">Commits not pushed yet</label><output id="rs-ahead-out" for="rs-ahead">1</output></div>
+<input id="rs-ahead" type="range" min="0" max="10" value="1">
+<div class="w-field"><label for="rs-mb">Largest file (MB)</label><output id="rs-mb-out" for="rs-mb">1</output></div>
+<input id="rs-mb" type="range" min="0" max="120" value="1">
+<label class="w-check"><input id="rs-del" type="checkbox"> A file was deleted</label>
+<label class="w-check"><input id="rs-secret" type="checkbox"> A secret-like file is included (.env, a key)</label>
+</div>
+<div class="w-result" id="rs-result" role="status" aria-live="polite"><h3 id="rs-title">Pushes silently</h3><p id="rs-body"></p><ul id="rs-reasons"></ul></div>
+</div>
+</div>
+</div>
+</section>
+<section id="how2" class="section field-white" aria-labelledby="how2-h">
+<div class="wrap split">
+<div class="split-head">
+<h2 id="how2-h">How it works</h2>
+
+</div>
+<div>
+<ol class="steps"><li><h3>It checks every two hours</h3><p>RepoSync looks at each repo in the folders you watch. You can change the interval. The minimum is 15 minutes.</p></li><li><h3>Small changes go out silently</h3><p>It commits with your prefix and the time, then pushes. A notification tells you, if you want one.</p></li><li><h3>Big or risky changes wait</h3><p>Each approval card says what would go out, who could see it, and whether it can be taken back. Push it, skip it, or decide later.</p></li></ol>
+</div>
+</div>
+</section>
+<section id="features" class="section field-blue" aria-labelledby="features-h">
+<div class="wrap">
+<h2 id="features-h">What it looks like</h2>
+
+<ul class="rows">
+<li class="row"><div class="row-media"><figure class="shot"><a class="zoom" href="/assets/img/reposync-2-approval.webp" data-caption="Risky changes wait for your OK."><img src="/assets/img/reposync-2-approval.webp" srcset="/assets/img/reposync-2-approval-800.webp 800w, /assets/img/reposync-2-approval.webp 1600w" sizes="(max-width: 52rem) 100vw, 44rem" alt="RepoSync's approval window with two cards that say what would go out, who could see it, and whether it can be undone." width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption class="muted">Risky changes wait for your OK.</figcaption></figure></div><div class="row-text"><h3>Risky changes wait for your OK</h3><p>Cards explain what is about to happen in plain words: how many files and lines, who can see the repo (private, or open to the whole internet), and whether a later commit can undo it. Secret-like files such as .env are flagged before they leave your Mac.</p></div></li>
+<li class="row row--flip"><div class="row-media"><figure class="shot"><a class="zoom" href="/assets/img/reposync-5-terminals.webp" data-caption="Open in terminals: tick, then push."><img src="/assets/img/reposync-5-terminals.webp" srcset="/assets/img/reposync-5-terminals-800.webp 800w, /assets/img/reposync-5-terminals.webp 1600w" sizes="(max-width: 52rem) 100vw, 44rem" alt="RepoSync's Open in terminals list with two repos ticked and a Push 2 selected button." width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption class="muted">Open in terminals: tick, then push.</figcaption></figure></div><div class="row-text"><h3>Push what you're working on</h3><p>RepoSync sees which repos are open in your terminals. Tick the ones you want and push them in one go.</p></div></li>
+<li class="row"><div class="row-media"><figure class="shot"><a class="zoom" href="/assets/img/reposync-3-claude-usage.webp" data-caption="Claude usage, at a glance."><img src="/assets/img/reposync-3-claude-usage.webp" srcset="/assets/img/reposync-3-claude-usage-800.webp 800w, /assets/img/reposync-3-claude-usage.webp 1600w" sizes="(max-width: 52rem) 100vw, 44rem" alt="RepoSync's Claude usage terminal showing session and weekly limits as percentage bars." width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption class="muted">Claude usage, at a glance.</figcaption></figure></div><div class="row-text"><h3>See your Claude limits before you hit them</h3><p>Session and weekly limits, your pace and token counts, read from Claude Code on your Mac. Turn the Claude usage panel on or off in Settings.</p></div></li>
+<li class="row row--flip"><div class="row-media"><figure class="shot"><a class="zoom" href="/assets/img/reposync-4-privacy.webp" data-caption="Claude usage settings."><img src="/assets/img/reposync-4-privacy.webp" srcset="/assets/img/reposync-4-privacy-800.webp 800w, /assets/img/reposync-4-privacy.webp 1600w" sizes="(max-width: 52rem) 100vw, 44rem" alt="RepoSync's settings for Claude usage, explaining that it reads local Claude Code logs and never signs in." width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption class="muted">Claude usage settings.</figcaption></figure></div><div class="row-text"><h3>Never signs in to your Claude account</h3><p>RepoSync reads what Claude Code already saves on this Mac. Your password and tokens stay where they are.</p></div></li>
+</ul>
+</div>
+</section>
+<section id="more" class="section field-white" aria-labelledby="more-h">
+<div class="wrap split">
+<div class="split-head">
+<h2 id="more-h">Details that matter</h2>
+
+</div>
+<div>
+<ul class="features"><li><h3>Pick your repositories</h3><p>Sync every repo in your watched folders, or only the ones you tick. Scan up to four levels deep.</p></li><li><h3>Always asks about risky files</h3><p>Deleted files and secret-like files, such as .env files and keys, always need approval.</p></li><li><h3>Readable commits</h3><p>Commit messages carry your prefix, the time, and what changed, so the history makes sense later.</p></li><li><h3>Opens at login</h3><p>Start it once and forget it.</p></li></ul>
+</div>
+</div>
+</section>
+<section id="faq" class="section field-blue" aria-labelledby="faq-h">
+<div class="wrap split">
+<div class="split-head">
+<h2 id="faq-h">Questions</h2>
+
+</div>
+<div>
+<details><summary>What counts as a big change?</summary><p>By default: more than 10 files, more than 300 added or removed lines, more than 5 unpushed commits, or a file over 50 MB. You can change every limit in Settings.</p></details>
+<details><summary>Will it push my secrets?</summary><p>No. Secret-like files, such as .env files and keys, always wait for your approval, and so do deleted files.</p></details>
+<details><summary>Which repos does it sync?</summary><p>Every repo in the folders you watch, or only the ones you tick. It scans up to four levels deep.</p></details>
+<details><summary>Does it need my Claude account?</summary><p>No. If you turn Claude usage on, RepoSync reads what Claude Code already saves on your Mac. It never signs in.</p></details>
+<details><summary>Can a push be undone?</summary><p>Each approval card says. Usually a later commit can revert it, and the history keeps a copy.</p></details>
+<details><summary>Which Macs does it run on?</summary><p>macOS 14 or later, on Apple silicon.</p></details><h3 class="facts-h">Details</h3><dl class="fact-sheet"><dt>Platform</dt><dd>macOS 14 or later, Apple silicon</dd><dt>Interval</dt><dd>Every 2 hours by default, 15 minutes at the shortest</dd><dt>Approval</dt><dd>Required for large or risky changes</dd><dt>Claude usage</dt><dd>Optional, read from Claude Code's local logs</dd></dl>
+</div>
+</div>
+</section>
+<section id="contact" class="section field-white" aria-labelledby="contact-h">
+<div class="wrap split">
+<div class="split-head">
+<h2 id="contact-h">Stay in the loop</h2>
+
+</div>
+<div>
+<p>Write to us about RepoSync, early access, press or playtesting.</p><div class="btn-row"><a class="btn btn--solid" href="mailto:hello@quindestudio.com?subject=RepoSync">Get RepoSync news</a><a class="btn" href="/press/">Press kit</a></div>
+</div>
+</div>
+</section>
+<section id="more-from" class="section field-blue" aria-labelledby="more-from-h">
+<div class="wrap split">
+<div class="split-head">
+<h2 id="more-from-h">More from Quinde Studio</h2>
+
+</div>
+<div>
+<ul class="related"><li><h3><a href="/apps/dusk/">Dusk</a></h3><p>A blue light filter that lives in your menu bar.</p><p class="muted small">macOS 15 or later</p></li><li><h3><a href="/apps/gameinventor/">GameInventor</a></h3><p>Design a complete tabletop game, then print it.</p><p class="muted small">Desktop app, in development</p></li></ul>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer field-blue">
+<div class="wrap foot">
+<div>
+<p><strong>Quinde Studio</strong></p>
+<p>Games and apps.</p>
+<p><a href="mailto:hello@quindestudio.com">hello@quindestudio.com</a></p>
+</div>
+<nav class="foot-nav" aria-label="Footer">
+<ul>
+<li><a href="/press/">Press</a></li>
+<li><a href="/support/">Support</a></li>
+<li><a href="/privacy/">Privacy policy</a></li>
+<li><a href="/terms/">Terms</a></li>
+</ul>
+</nav>
+<p class="fine">&copy; 2026 Quinde Studio. Apple, iPhone, iPad and Game Center are trademarks of Apple Inc. Set in Helvetica Neue and proportioned by the golden ratio.</p>
+</div>
+</footer>
+</body>
+</html>
