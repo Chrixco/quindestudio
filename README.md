@@ -16,7 +16,8 @@ Then open http://localhost:8765/. Links are root-relative (`/assets/...`), so pr
 |---|---|
 | `index.html` | Studio home with the Word Laddered hero, playable demo, rules, features, contact |
 | `games/<name>/`, `apps/<name>/` | One page per project: Word Laddered, Magic Mountain, Automata Dungeon, GameInventor, Dusk, RepoSync |
-| `press/ support/ privacy/ terms/` | Press kit, support (App Store Support URL), privacy policy (App Store Privacy Policy URL), terms |
+| `press/ support/ privacy/ terms/` | Press kit, support (App Store Support URL), privacy index (website privacy plus links to each app's policy), terms |
+| `games/<name>/privacy/`, `apps/<name>/privacy/` | One privacy policy per game or app. Word Laddered's App Store Privacy Policy URL is `/games/word-laddered/privacy/` |
 | `404.html` | Not-found page |
 | `assets/site.css` | All styles. Two colours (`--blue`, `--white`); type, spacing and layout follow the golden ratio |
 | `assets/heromap.js` | Magic Mountain's living map (ported from the game's own website) |
@@ -36,7 +37,7 @@ When you change `site.css` or the scripts, bump the `?v=` query in the HTML so b
 - [ ] Set up mailboxes: `hello@`, `support@`, `privacy@`, `security@quindestudio.com` (or change them everywhere).
 - [ ] Choose a host and point DNS at it. Cloudflare Pages or Netlify apply `_headers` (CSP, HSTS, etc.). GitHub Pages ignores it; the pages carry a CSP meta tag as a fallback.
 - [ ] Confirm HTTPS works on `quindestudio.com` and `www` redirects to it.
-- [ ] Re-read `privacy/` against the shipping build. It says: no ads, no analytics, no third-party SDKs, nothing sent to the studio, Game Center and iCloud handled by Apple.
+- [ ] Re-read each app's privacy policy against its shipping build. The RepoSync, GameInventor and Automata Dungeon policies were written from their source code on 25 November 2026.
 - [ ] Have `terms/` and `privacy/` reviewed by a lawyer. They are plain-language drafts with no governing-law clause.
 - [ ] Update `lastmod` in `sitemap.xml` and the "Last updated" dates when content changes.
 - [ ] After launch: add the App Store badge and link, a `apple-itunes-app` Smart App Banner meta tag (needs the app ID), real screenshots and the trailer on `/press/`, and update the `MobileApplication` JSON-LD with the store URL.
