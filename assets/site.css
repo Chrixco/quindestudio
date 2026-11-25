@@ -124,9 +124,26 @@ a:hover { text-decoration-thickness: 4px; }
 .mark {
   display: inline-block; flex: none; height: 2.625rem; aspect-ratio: 1;
   background: var(--ink);
-  -webkit-mask: url("/assets/quinde-mark.svg") center / contain no-repeat;
-  mask: url("/assets/quinde-mark.svg") center / contain no-repeat;
+  /* three wing frames side by side (rest, up, down): the bird flaps when a page loads, then settles */
+  -webkit-mask: url("/assets/quinde-mark-flap.svg") 0 0 / 300% 100% no-repeat;
+  mask: url("/assets/quinde-mark-flap.svg") 0 0 / 300% 100% no-repeat;
+  animation: quinde-flap 1.15s steps(1, end) 0.3s both;
 }
+/* a few quick beats that slow down, the last one a small lift, then rest */
+@keyframes quinde-flap {
+  0%   { -webkit-mask-position: 0 0;    mask-position: 0 0; }
+  7%   { -webkit-mask-position: 50% 0;  mask-position: 50% 0; }
+  14%  { -webkit-mask-position: 0 0;    mask-position: 0 0; }
+  21%  { -webkit-mask-position: 100% 0; mask-position: 100% 0; }
+  28%  { -webkit-mask-position: 0 0;    mask-position: 0 0; }
+  36%  { -webkit-mask-position: 50% 0;  mask-position: 50% 0; }
+  45%  { -webkit-mask-position: 0 0;    mask-position: 0 0; }
+  56%  { -webkit-mask-position: 100% 0; mask-position: 100% 0; }
+  70%  { -webkit-mask-position: 0 0;    mask-position: 0 0; }
+  84%  { -webkit-mask-position: 50% 0;  mask-position: 50% 0; }
+  100% { -webkit-mask-position: 0 0;    mask-position: 0 0; }
+}
+@media (prefers-reduced-motion: reduce) { .mark { animation: none; } }
 
 .nav ul, .foot-nav ul { display: flex; flex-wrap: wrap; gap: 0 var(--s3); list-style: none; padding: 0; margin: 0; }
 .nav a, .foot-nav a {
