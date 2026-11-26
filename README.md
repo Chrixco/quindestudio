@@ -32,6 +32,14 @@ Then open http://localhost:8765/. Links are root-relative (`/assets/...`), so pr
 The HTML pages were generated from one template; edit them directly now.
 When you change `site.css` or the scripts, bump the `?v=` query in the HTML so browsers refetch.
 
+## Images
+
+Put full-size images in `assets/img/` (webp, jpg or png), use them in the HTML as `<img src="/assets/img/name.webp" width=… height=…>`, then run:
+
+    python3 scripts/images.py
+
+It makes smaller copies (`name-480.webp`, `-800`, `-1200`, `-1600`, never wider than the original) and adds `srcset` and `sizes` to every `<img>` that shows the image, so phones download small files and large screens get sharp ones. It only rebuilds what changed; `--check` shows what it would do. Needs Pillow. Add a class to `SIZES` in the script when a new layout draws images at a new width.
+
 ## Before it goes live
 
 - [ ] Set up mailboxes: `hello@`, `support@`, `privacy@`, `security@quindestudio.com` (or change them everywhere).
